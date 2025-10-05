@@ -34,7 +34,7 @@ const Header = () => {
       </div>
 
       {/* Navigation Items */}
-      <div className="flex gap-2 justify-center items-center bg-[rgb(21,13,28)] px-4 py-2 rounded-full text-white">
+      <div className="lg:flex gap-2 justify-center items-center bg-[rgb(21,13,28)] px-4 py-2 rounded-full text-white hidden">
         {navItems.map((item) => (
           <Link
             key={item.name}

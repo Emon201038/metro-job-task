@@ -11,8 +11,8 @@ const Main = () => {
       </h1>
       <p className="text-white/70 max-w-md text-sm text-center w-full mx-auto">
         Based on the description of Metro Solver and the image provided, <br />{" "}
-        here is a 6-step process that Metro Solver uses to scale a customer's
-        business
+        here is a 6-step process that Metro Solver uses to scale a
+        customer&apos;s business
       </p>
       <div className="w-full flex flex-col justify-center items-center mt-8 mx-auto">
         <Tabs
