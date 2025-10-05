@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import NavLink from "./nav-link";
+import { ChevronDown } from "lucide-react";
 
 const navItems = [
   {
@@ -15,6 +16,7 @@ const navItems = [
   {
     name: "Services",
     link: "/services",
+    showArrow: true,
   },
   {
     name: "White label",
@@ -28,7 +30,7 @@ const navItems = [
 
 const Header = () => {
   return (
-    <header className="w-full py-2 flex justify-between items-center lg:px-24 md:px-12 px-6">
+    <header className="w-full py-2 flex justify-between items-center lg:px-24 md:px-12 px-6 fixed top-0 z-50 bg-[rgb(13,4,20)] backdrop-blur-sm">
       {/* Logo */}
       <div>
         <Image
@@ -55,8 +57,13 @@ const Header = () => {
       <div className="lg:flex gap-2 justify-center items-center bg-[rgb(21,13,28)] px-4 py-2 rounded-full text-white hidden">
         {navItems.map((item) => (
           <NavLink key={item.name} href={item.link}>
-            <p className="bg-[rgb(21,13,28)] rounded-4xl py-1 px-4">
-              {item.name}
+            <p className="bg-[rgb(21,13,28)] rounded-4xl py-1 px-4 flex gap-1 items-center justify-center">
+              {item.name}{" "}
+              {item.showArrow && (
+                <span className="ml-1">
+                  <ChevronDown />
+                </span>
+              )}
             </p>
           </NavLink>
         ))}
