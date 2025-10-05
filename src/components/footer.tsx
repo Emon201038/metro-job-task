@@ -78,9 +78,27 @@ const Footer = () => {
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="gbp">🇬🇧 GBP - British Pound</SelectItem>
-                  <SelectItem value="usd">🇺🇸 USD - US Dollar</SelectItem>
-                  <SelectItem value="eur">🇪🇺 EUR - Euro</SelectItem>
+                  <SelectItem
+                    value="gbp"
+                    className="flex gap-1 justify-start items-center"
+                  >
+                    <Image src={"/uk.png"} width={20} height={20} alt="flag" />{" "}
+                    GBP - British Pound
+                  </SelectItem>
+                  <SelectItem
+                    value="usd"
+                    className="flex gap-1 justify-start items-center"
+                  >
+                    <Image src={"/usa.png"} width={20} height={20} alt="flag" />{" "}
+                    USD - US Dollar
+                  </SelectItem>
+                  <SelectItem
+                    value="eur"
+                    className="flex gap-1 justify-start items-center"
+                  >
+                    <Image src={"/aus.png"} width={20} height={20} alt="flag" />{" "}
+                    DOLLAR - AUS Dollar
+                  </SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -240,53 +258,43 @@ const Footer = () => {
           <p className="mb-6 text-sm text-gray-400">Our Future Partners</p>
           <div className="flex flex-wrap items-center gap-8">
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-full bg-blue-600" />
               <div>
-                <p className="text-xs font-semibold">Meta</p>
-                <p className="text-[10px] text-gray-400">Business Partner</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-full bg-white" />
-              <div>
-                <p className="text-xs font-semibold">
-                  Google Marketing Platform
-                </p>
-                <p className="text-[10px] text-gray-400">Certified Partner</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="grid h-8 w-8 grid-cols-2 gap-0.5">
-                <div className="bg-red-500" />
-                <div className="bg-green-500" />
-                <div className="bg-blue-500" />
-                <div className="bg-yellow-500" />
+                <Image src={"/meta.png"} alt="meta" width={150} height={80} />
               </div>
               <div>
-                <p className="text-xs font-semibold">Microsoft</p>
-                <p className="text-[10px] text-gray-400">Partner</p>
+                <Image
+                  src={"/amazon.png"}
+                  alt="amazon"
+                  width={150}
+                  height={80}
+                />
               </div>
-            </div>
-            <div className="rounded border-2 border-orange-500 px-3 py-1.5">
-              <p className="text-xs font-semibold text-orange-500">AWS</p>
-              <p className="text-[10px] text-orange-500">Partner</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded bg-red-600" />
               <div>
-                <p className="text-xs font-semibold">Zoho</p>
-                <p className="text-[10px] text-gray-400">Partner</p>
+                <Image src={"/aws.png"} alt="aws" width={150} height={80} />
               </div>
-            </div>
-            <div>
-              <p className="text-sm font-semibold">amazon</p>
-              <p className="text-[10px] text-gray-400">SDN</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-full bg-gradient-to-br from-cyan-400 via-pink-500 to-purple-600" />
               <div>
-                <p className="text-xs font-semibold">TikTok</p>
-                <p className="text-[10px] text-gray-400">Marketing Partners</p>
+                <Image
+                  src={"/microsoft.png"}
+                  alt="microsoft"
+                  width={150}
+                  height={80}
+                />
+              </div>
+              <div>
+                <Image
+                  src={"/google.png"}
+                  alt="google"
+                  width={150}
+                  height={80}
+                />
+              </div>
+              <div>
+                <Image
+                  src={"/tiktok.png"}
+                  alt="tiktok"
+                  width={150}
+                  height={80}
+                />
               </div>
             </div>
           </div>
