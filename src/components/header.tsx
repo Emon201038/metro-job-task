@@ -31,17 +31,30 @@ const Header = () => {
     <header className="w-full py-2 flex justify-between items-center lg:px-24 md:px-12 px-6">
       {/* Logo */}
       <div>
-        <Image src={"/logo.png"} alt="Logo" width={100} height={100} />
+        <Image
+          src={"/logo.png"}
+          alt="Logo"
+          width={100}
+          height={100}
+          className="lg:block hidden"
+        />
+        <Image
+          src={"/menue.png"}
+          alt="Logo"
+          width={40}
+          height={40}
+          className="block lg:hidden cursor-pointer"
+        />
+      </div>
+
+      <div className="block lg:hidden cursor-pointer">
+        <Image src={"/logo.png"} alt="Logo" width={60} height={32} />
       </div>
 
       {/* Navigation Items */}
       <div className="lg:flex gap-2 justify-center items-center bg-[rgb(21,13,28)] px-4 py-2 rounded-full text-white hidden">
         {navItems.map((item) => (
-          <NavLink
-            key={item.name}
-            href={item.link}
-            // className="p-px rounded-4xl whitespace-nowrap hover:scale-105 transition-all duration-200 bg-gradient-to-r from-[rgb(192,109,252)]  to-white/70"
-          >
+          <NavLink key={item.name} href={item.link}>
             <p className="bg-[rgb(21,13,28)] rounded-4xl py-1 px-4">
               {item.name}
             </p>
@@ -50,7 +63,14 @@ const Header = () => {
       </div>
 
       {/* Auth Info */}
-      <div className="flex justify-between items-center gap-2">
+      <Image
+        src={"/message.png"}
+        alt="Logo"
+        width={40}
+        height={40}
+        className="block lg:hidden cursor-pointer"
+      />
+      <div className="lg:flex hidden justify-between items-center gap-2">
         <button className="size-14 rounded-full bg-gradient-to-r from-[rgb(66,32,120)] via-[rgb(21,13,28)] to-[rgb(66,32,120)] flex justify-center items-center hover:scale-105 transition-all duration-200 text-white relative">
           <Image src="/cart.png" width={24} height={24} alt="cart" />
           <div className="absolute top-3 right-3 bg-red-500 rounded-full w-4 h-4 flex justify-center items-center text-white text-xs">
