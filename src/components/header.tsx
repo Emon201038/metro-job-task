@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import NavLink from "./nav-link";
 
 const navItems = [
   {
@@ -36,15 +37,15 @@ const Header = () => {
       {/* Navigation Items */}
       <div className="lg:flex gap-2 justify-center items-center bg-[rgb(21,13,28)] px-4 py-2 rounded-full text-white hidden">
         {navItems.map((item) => (
-          <Link
+          <NavLink
             key={item.name}
             href={item.link}
-            className="p-px rounded-4xl whitespace-nowrap hover:scale-105 transition-all duration-200 bg-gradient-to-r from-[rgb(192,109,252)]  to-white/70"
+            // className="p-px rounded-4xl whitespace-nowrap hover:scale-105 transition-all duration-200 bg-gradient-to-r from-[rgb(192,109,252)]  to-white/70"
           >
-            <p className="bg-[rgb(21,13,28)] rounded-4xl py-2 px-4">
+            <p className="bg-[rgb(21,13,28)] rounded-4xl py-1 px-4">
               {item.name}
             </p>
-          </Link>
+          </NavLink>
         ))}
       </div>
 
